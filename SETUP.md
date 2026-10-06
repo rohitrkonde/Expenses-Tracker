@@ -14,10 +14,10 @@ From Supabase project settings, copy:
 Do not put a service-role/secret key in this app.
 
 ## 4. Open the GitHub Pages site
-On first load, paste the Project URL and anon key. They are stored only in this browser's local storage.
+The app already contains the browser-safe Supabase Project URL and publishable/anon key, so the login page does not ask for database configuration.
 
-## 5. Create the two accounts
-Create your account, then have your wife create her account using the same site. From Household & settings, enter her registered email and display name to add her to your household.
+## 5. Create the three fixed household accounts
+The login UI uses the three application usernames: `rohit`, `rohit & kavita`, and `kavita`. The corresponding Supabase Auth users must exist before those logins can succeed. Do not put a Supabase service-role/secret key in the browser; account provisioning should be done through Supabase Auth/admin tooling or a server-side Edge Function.
 
 ## Security
 All financial tables use Supabase Row Level Security and household membership checks. Keep RLS enabled.
